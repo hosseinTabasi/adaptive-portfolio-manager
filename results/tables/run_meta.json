@@ -1,0 +1,27 @@
+{
+  "label": "FULL-public",
+  "source": "yahoo",
+  "tickers": [
+    "AAPL",
+    "MSFT",
+    "SPY",
+    "QQQ",
+    "GLD",
+    "TLT",
+    "IWM",
+    "EFA",
+    "BTC-USD",
+    "ETH-USD"
+  ],
+  "failed_tickers": [],
+  "notes": [
+    "Saved last lstm weights under /workspace/adaptive-portfolio-manager/models (as-of 2026-05-29)."
+  ],
+  "forecast_model": "lstm",
+  "n_rebalances": 44,
+  "as_of": "2026-08-28",
+  "target_vol": 0.12,
+  "risk": "medium",
+  "regime": "SPY SMA50=753.95 vs SMA200=709.10 risk-on on 2026-08-28.",
+  "summary": "Label: FULL-public. Forecast model: lstm. Universe (10): AAPL, MSFT, SPY, QQQ, GLD, TLT, IWM, EFA, BTC-USD, ETH-USD. This allocation targets about 12% annualized volatility (risk tolerance: medium) under a long-only mean-variance rule with a 25% per-name cap. Cash residual is 10.7%. Largest holdings: QQQ 22.3%, AAPL 22.3%, GLD 22.3%, SPY 22.3%, MSFT 0.0%. Backtest (transaction costs included): LSTM+MV CAGR 14.4%, vol 14.8%, Sharpe 0.95, max DD -17.0%; equal-weight CAGR 23.9%, Sharpe 1.28. These are historical simulations, not live trading results."
+}
