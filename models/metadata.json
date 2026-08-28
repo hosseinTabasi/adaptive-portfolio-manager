@@ -1,0 +1,18 @@
+{
+  "model": "lstm",
+  "seed": 42,
+  "lookback": 20,
+  "hidden_size": 16,
+  "assets_saved": [
+    "AAPL",
+    "MSFT",
+    "SPY",
+    "QQQ",
+    "GLD",
+    "TLT",
+    "IWM",
+    "EFA",
+    "BTC-USD",
+    "ETH-USD"
+  ]
+}
