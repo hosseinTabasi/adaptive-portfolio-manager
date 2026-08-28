@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: If you use this software, please cite it using these metadata.
+type: software
+title: "Adaptive Portfolio Manager"
+version: 0.1.0
+date-released: "2026-08-28"
+license: MIT
+authors:
+  - family-names: Tabasi
+    given-names: Hossein
+keywords:
+  - portfolio optimization
+  - mean-variance
+  - hierarchical risk parity
+  - LSTM
+  - walk-forward backtest
+abstract: >
+  A research tool that allocates and periodically rebalances a multi-asset
+  portfolio using walk-forward LSTM (or Ridge) forecasts of return and
+  volatility, with mean-variance and hierarchical risk parity constructors,
+  a moving-average regime filter, and transaction-cost-aware backtests.
+  Results are historical simulations on public Yahoo Finance prices or a
+  labeled TOY panel. They are not live trading profits.

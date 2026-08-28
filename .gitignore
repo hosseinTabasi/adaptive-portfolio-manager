@@ -1,0 +1,21 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.ipynb_checkpoints/
+.python-version
+*.log
+
+# raw vendor cache (yfinance parquet/pickle)
+data/cache/**
+!data/cache/.gitkeep
+
+# local secrets
+.env
