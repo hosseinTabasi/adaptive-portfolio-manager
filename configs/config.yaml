@@ -1,0 +1,72 @@
+universe:
+  tickers:
+    - AAPL
+    - MSFT
+    - SPY
+    - QQQ
+    - GLD
+    - TLT
+    - IWM
+    - EFA
+    - BTC-USD
+    - ETH-USD
+  start: "2021-01-01"
+  end: null
+
+data:
+  cache_dir: data/cache
+  processed_dir: data/processed
+  max_ffill_days: 5
+
+forecast:
+  model: lstm          # lstm | ridge | transformer
+  lookback: 20
+  horizon: 21
+  hidden_size: 16
+  num_layers: 1
+  epochs: 8
+  batch_size: 64
+  learning_rate: 0.01
+  seed: 42
+  retrain_every: 4     # rebalance steps between LSTM refits
+  min_train_obs: 252
+  input_features: 1    # daily log return
+  transformer:
+    d_model: 16
+    nhead: 2
+    dim_feedforward: 32
+
+portfolio:
+  max_weight: 0.25
+  min_weight: 0.0
+  risk_aversion: 3.0
+  target_vol:
+    low: 0.08
+    medium: 0.12
+    high: 0.18
+  rf: 0.0
+  cov_method: ledoit_wolf   # ledoit_wolf | sample
+  cov_lookback: 252
+
+rebalance:
+  frequency: monthly        # monthly | quarterly
+  transaction_cost_bps: 10
+
+regime:
+  enabled: true
+  fast_ma: 50
+  slow_ma: 200
+  index: SPY
+  risk_scale: 0.5
+  defensive_tickers: [TLT, GLD]
+  equity_tickers: [AAPL, MSFT, SPY, QQQ, IWM, EFA]
+  crypto_tickers: [BTC-USD, ETH-USD]
+
+backtest:
+  start: "2023-01-01"
+  initial_capital: 100000.0
+
+output:
+  figures_dir: results/figures
+  tables_dir: results/tables
+  models_dir: models
